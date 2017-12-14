@@ -1,7 +1,7 @@
 package Games.UI;
 
 import Games.ApplicationRoot;
-import Games.UI.Menu.MenuTab;
+import Games.UI.Menu.MenuPane;
 import javafx.scene.control.TabPane;
 
 /**
@@ -10,10 +10,8 @@ import javafx.scene.control.TabPane;
  */
 public class CustomTabPane extends TabPane{
 
-  private final CustomTab menuTab;
-
   CustomTabPane(){
-    this.menuTab = new MenuTab();
+    CustomTab menuTab = new CustomTab("Menu", false, new MenuPane(this));
     getTabs().add(menuTab);
     sizeToScene();
   }
