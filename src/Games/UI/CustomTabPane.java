@@ -19,5 +19,11 @@ public class CustomTabPane extends TabPane{
   private void sizeToScene() {
     setPrefWidth(ApplicationRoot.resolution.getWidth());
     setPrefHeight(ApplicationRoot.resolution.getHeight());
+    setStyle(".tab-pane {\n" +
+        "  -fx-tab-min-width:64px;\n" +
+        "  -fx-tab-max-width:64px;\n" +
+        "  -fx-tab-min-height:32px;\n" +
+        "  -fx-tab-max-height:32px;\n" +
+        "}");
   }
 }

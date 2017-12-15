@@ -7,8 +7,7 @@ import javafx.scene.Scene;
  * Custom Scene. Contains all other Elements.
  */
 public class ApplicationScene extends Scene {
-
   public ApplicationScene(){
     super(new ApplicationPane());
-  }
+    }
 }

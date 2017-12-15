@@ -2,6 +2,7 @@ package Games.UI.Menu;
 
 import Games.UI.CustomTabPane;
 import Games.UI.TabFactory;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -19,6 +20,7 @@ public class MenuPane extends GridPane {
 
   private Button printerButton;
   private Button rpgButton;
+  private Button exitButton;
 
   public MenuPane(CustomTabPane tabpane){
     this.tabpane = tabpane;
@@ -41,10 +43,12 @@ public class MenuPane extends GridPane {
     rpgButton.setOnAction(new EventHandler<ActionEvent>() {
       @Override
       public void handle(ActionEvent event) {
-        // Opens a new Printer Tab
+        // Opens a new RPG Tab
         tabpane.getTabs().add(tabfactory.create(2));
       }
     });
+    exitButton = new Button("Exit");
+    exitButton.setOnAction(e -> Platform.exit());
   }
 
   private void place() {
@@ -54,11 +58,13 @@ public class MenuPane extends GridPane {
 
     // Determine where elements will be placed.
     setConstraints(printerButton, 0, 0);
-    setConstraints(rpgButton, 1, 0);
+    setConstraints(rpgButton, 0, 1);
+    setConstraints(exitButton, 0, 2);
 
     // Add elements to the Pane.
     getChildren().add(printerButton);
     getChildren().add(rpgButton);
+    getChildren().add(exitButton);
   }
 
 

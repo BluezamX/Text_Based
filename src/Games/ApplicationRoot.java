@@ -26,11 +26,7 @@ public class ApplicationRoot extends Application{
 
   private void configure(Stage stage){
     {
-      stage.setMinWidth(resolution.getWidth() / 2);
-      stage.setMinHeight(resolution.getHeight() / 4);
-
-      stage.setWidth(resolution.getWidth());
-      stage.setHeight(resolution.getHeight());
+      stage.setFullScreen(true);
     }
 
     stage.setResizable(true);

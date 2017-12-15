@@ -18,4 +18,7 @@ public class CustomTab extends Tab {
     this.pane = pane;
     setContent(this.pane);
   }
+
+  public void setStyle(){
+  }
 }

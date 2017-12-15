@@ -42,6 +42,8 @@ public class Character {
     return moves[number];
   }
 
+  public Move[] getMoves(){ return moves;}
+
   public String getName(){
     return name;
   }
